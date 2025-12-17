@@ -1,0 +1,154 @@
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif; }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #dbeafe, #f3e8ff);
+        }
+
+        .container-login {
+            position: relative;
+            width: 850px;
+            height: 500px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .form-box {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 50%;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: 0.8s ease-in-out;
+        }
+
+        .form-box h2 {
+            text-align: center;
+            color: #1e3a8a;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .input-box {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .input-box input, 
+        .input-box select {
+            width: 100%;
+            padding: 10px 40px;
+            background: #f1f5f9;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+            font-size: 1em;
+        }
+
+        .input-box i {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #555;
+            font-size: 1.2em;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background: #3b82f6;
+            border: none;
+            color: #fff;
+            font-weight: 600;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #2563eb;
+        }
+
+        .toggle-panel {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(135deg, #3b82f6, #60a5fa);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+            transition: 0.8s ease-in-out;
+        }
+
+        .toggle-panel h3 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .toggle-panel p {
+            font-size: 1em;
+            margin-bottom: 25px;
+        }
+
+        .toggle-panel button {
+            background: #fff;
+            color: #2563eb;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .toggle-panel button:hover {
+            background: #e0e7ff;
+        }
+
+        .form-box.register {
+            right: -50%;
+            opacity: 0;
+        }
+
+        .container-login.active .form-box.login {
+            left: -50%;
+            opacity: 0;
+        }
+
+        .container-login.active .form-box.register {
+            right: 0;
+            opacity: 1;
+        }
+
+        .container-login.active .toggle-panel {
+            right: 50%;
+            background: linear-gradient(135deg, #6366f1, #60a5fa);
+        }
+
+        .back-text {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            color: #2563eb;
+            font-size: 0.95em;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-text:hover {
+            text-decoration: underline;
+        }
